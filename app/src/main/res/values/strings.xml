@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">AndelaProject</string>
+    <string name="no_network_alert">There is no network connection detected!</string>
+    <string name="no_network_title">Network Inactive</string>
+    <string name="try_again">Retry</string>
+    <string name="end_actv">Exit</string>
 </resources>

@@ -3,10 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_height="match_parent"
     tools:context="com.example.leniovo.andelaproject.UserPageActivity">
-<com.androidnetworking.widget.ANImageView
+
+
+
+    <com.androidnetworking.widget.ANImageView
     android:layout_width="380dp"
     android:layout_height="350dp"
     android:paddingLeft="10dp"

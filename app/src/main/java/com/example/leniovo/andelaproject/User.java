@@ -1,10 +1,13 @@
 package com.example.leniovo.andelaproject;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 /**
  * Created by LENIOVO on 4/19/2017.
  */
 
-public class User {
+public class User implements Parcelable {
 
 
     private String username, avatarURl,profileUrl;
@@ -14,6 +17,24 @@ public class User {
         this.avatarURl = avatarURl;
         this.profileUrl = profileUrl;
     }
+
+    protected User(Parcel in) {
+        username = in.readString();
+        avatarURl = in.readString();
+        profileUrl = in.readString();
+    }
+
+    public static final Creator<User> CREATOR = new Creator<User>() {
+        @Override
+        public User createFromParcel(Parcel in) {
+            return new User(in);
+        }
+
+        @Override
+        public User[] newArray(int size) {
+            return new User[size];
+        }
+    };
 
     public String getUsername() {
         return username;
@@ -39,4 +60,15 @@ public class User {
         this.profileUrl = profileUrl;
     }
 
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(username);
+        dest.writeString(avatarURl);
+        dest.writeString(profileUrl);
+    }
 }
